@@ -41,6 +41,13 @@ El script creará la base `persona_db`, sus tablas y datos de prueba.
 
 ### 3️⃣ Configurar la conexión a la base de datos
 
+```json
+"ConnectionStrings": {
+  "PersonaDB": "Server=localhost\\SQLEXPRESS;Database=persona_db;Trusted_Connection=True;TrustServerCertificate=True;"
+}
+```
+---
+
 ### 4️⃣ Restaurar dependencias
 
 Abre una terminal en la carpeta del proyecto y ejecuta:
@@ -48,7 +55,7 @@ Abre una terminal en la carpeta del proyecto y ejecuta:
 ```
 dotnet restore
 ```
-
+---
 ### 5️⃣ Compilación
 ```
 dotnet build
@@ -57,7 +64,7 @@ dotnet build
 O desde Visual Studio:
 
 🔹Selecciona Build → Build Solution (Ctrl+Shift+B)
-
+---
 ### 6️⃣ Ejecución (Despliegue Local)
 🔹 Opción 1 — Visual Studio
 
@@ -77,6 +84,7 @@ Accede en el navegador a:
 ```
 http://localhost:5000/
 ```
+---
 ### 7️⃣ Despliegue (Publicación)
 
 Puedes publicar la aplicación en una carpeta ejecutable con:
@@ -90,6 +98,7 @@ Para correrlos:
 cd publish
 dotnet personapi-dotnet.dll
 ```
+---
 ### 8️⃣ (Opcional) Despliegue con Docker
 
 Si deseas ejecutar el proyecto dentro de un contenedor:
@@ -102,7 +111,7 @@ Luego accede a:
 ```
 http://localhost:8080
 ```
-
+---
 🧱 Estructura del Proyecto
 ```
 personapi-dotnet/
@@ -123,6 +132,7 @@ personapi-dotnet/
 ├── script.sql
 └── README.md
 ```
+---
 ### 📄 Script SQL
 
 El archivo script.sql
@@ -131,7 +141,7 @@ El archivo script.sql
 🔹DDL: creación de tablas (persona, profesion, telefono, estudios)
 
 🔹DML: datos de prueba para cada tabla
-
+---
 ### 🧾 Documento de soporte
 
 Informe en PDF incluye:
@@ -143,6 +153,7 @@ Informe en PDF incluye:
   5. Conclusiones y lecciones aprendidas  
   6. Referencias
 
+---
 ### 🏷️ Repositorio y TAG
 
 🔹Repositorio GitHub: https://github.com/<TU_USUARIO>/personapi-dotnet
