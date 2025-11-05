@@ -41,65 +41,70 @@ El script creará la base `persona_db`, sus tablas y datos de prueba.
 
 ### 3️⃣ Configurar la conexión a la base de datos
 
-4️⃣ Restaurar dependencias
+### 4️⃣ Restaurar dependencias
 
 Abre una terminal en la carpeta del proyecto y ejecuta:
 
+```
 dotnet restore
+```
 
-5️⃣ Compilación
+### 5️⃣ Compilación
+```
 dotnet build
-
+```
 
 O desde Visual Studio:
 
-Selecciona Build → Build Solution (Ctrl+Shift+B)
+🔹Selecciona Build → Build Solution (Ctrl+Shift+B)
 
-6️⃣ Ejecución (Despliegue Local)
+### 6️⃣ Ejecución (Despliegue Local)
 🔹 Opción 1 — Visual Studio
 
 Presiona Ctrl + F5
 La app se ejecutará en:
-
+```
 http://localhost:xxxx/
-
+```
 🔹 Opción 2 — CLI
 
 Desde la terminal:
-
+```
 dotnet run
-
+```
 
 Accede en el navegador a:
-
+```
 http://localhost:5000/
-
-7️⃣ Despliegue (Publicación)
+```
+### 7️⃣ Despliegue (Publicación)
 
 Puedes publicar la aplicación en una carpeta ejecutable con:
-
+```
 dotnet publish -c Release -o ./publish
-
+```
 
 Esto generará los archivos listos en publish/.
 Para correrlos:
-
+```
 cd publish
 dotnet personapi-dotnet.dll
-
-8️⃣ (Opcional) Despliegue con Docker
+```
+### 8️⃣ (Opcional) Despliegue con Docker
 
 Si deseas ejecutar el proyecto dentro de un contenedor:
-
+```
 docker build -t personapi-dotnet .
 docker run -d -p 8080:80 personapi-dotnet
-
+```
 
 Luego accede a:
-
+```
 http://localhost:8080
+```
 
 🧱 Estructura del Proyecto
+```
 personapi-dotnet/
 ├── Controllers/
 │   ├── PersonasController.cs
@@ -117,39 +122,34 @@ personapi-dotnet/
 ├── Program.cs
 ├── script.sql
 └── README.md
-
-📄 Script SQL
+```
+### 📄 Script SQL
 
 El archivo script.sql
  contiene:
 
-DDL: creación de tablas (persona, profesion, telefono, estudios)
+🔹DDL: creación de tablas (persona, profesion, telefono, estudios)
 
-DML: datos de prueba para cada tabla
+🔹DML: datos de prueba para cada tabla
 
-🧾 Documento de soporte
+### 🧾 Documento de soporte
 
 Informe en PDF incluye:
 
-Portada
+  1. Portada  
+  2. Marco conceptual  
+  3. Diseño de la solución (arquitectura MVC + DAO)  
+  4. Procedimiento  
+  5. Conclusiones y lecciones aprendidas  
+  6. Referencias
 
-Marco conceptual
+### 🏷️ Repositorio y TAG
 
-Diseño de la solución (arquitectura MVC + DAO)
+🔹Repositorio GitHub: https://github.com/<TU_USUARIO>/personapi-dotnet
 
-Procedimiento
-
-Conclusiones y lecciones aprendidas
-
-Referencias
-
-🏷️ Repositorio y TAG
-
-Repositorio GitHub: https://github.com/<TU_USUARIO>/personapi-dotnet
-
-TAG de entrega: v1.0-lab1
+🔹TAG de entrega: v1.0-lab1
 
 Autor:
-Nombre completo del estudiante
-Universidad Javeriana
+Juan Nicolas Avella
+Pontificia Universidad Javeriana
 Curso: Arquitectura de Software
